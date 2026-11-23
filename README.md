@@ -1,8 +1,24 @@
 # Kalkulator Probabilitas & Teorema Bayes
 
-Aplikasi web interaktif untuk menghitung dan memahami konsep probabilitas dasar, probabilitas bersyarat, serta Teorema Bayes. Proyek ini dibuat sebagai bagian dari **UTS Statistika – Soal 2**.
+Aplikasi web interaktif untuk menghitung dan memahami konsep probabilitas dasar, probabilitas bersyarat, serta Teorema Bayes. Proyek ini dibuat sebagai bagian dari UTS Statistika – Soal 2.
 
 Aplikasi dirancang dengan tampilan responsif, perhitungan otomatis, visualisasi, dan interpretasi hasil agar pengguna lebih mudah memahami konsep probabilitas dalam kehidupan sehari-hari.
+
+**Website:** https://rasyad0907-a11y.github.io/Project_UTS_Statiska_Soal_2_Kelompok_1/pages/probabilitas.html
+
+---
+
+## Anggota Kelompok 1
+
+| No. | NIM | Nama Anggota |
+|:---:|:---:|---|
+| 1 | 2503010024 | Riyad Hiyan Arizki |
+| 2 | 2503010025 | Muhammad Rasyad Mubarok |
+| 3 | 2503010035 | Wafik Muhammad Almajdi |
+| 4 | 2503010051 | Reva Nur Budiman |
+| 5 | 2503010132 | Allya Hericka Putri |
+
+---
 
 ## Fitur Utama
 
@@ -29,6 +45,8 @@ Membahas probabilitas dengan informasi atau kondisi tambahan:
 - **Visualisasi 10.000 Email:** Menampilkan ilustrasi hasil deteksi dalam bentuk kotak-kotak visual.
 - **Analisis Prevalensi:** Memperlihatkan pengaruh perubahan prevalensi terhadap hasil probabilitas Bayes.
 
+---
+
 ## Teknologi yang Digunakan
 
 | Teknologi | Kegunaan |
@@ -37,34 +55,38 @@ Membahas probabilitas dengan informasi atau kondisi tambahan:
 | CSS3 | Mengatur tampilan, desain, dan responsivitas |
 | JavaScript | Mengolah perhitungan dan interaksi aplikasi |
 | SVG | Membuat visualisasi Diagram Venn |
+| GitHub Pages | Hosting aplikasi agar dapat diakses secara online |
 
 Aplikasi dibuat menggunakan Vanilla JavaScript tanpa framework atau library eksternal untuk proses perhitungan.
+
+---
 
 ## Struktur Folder
 
 ```text
-Project_UTS_Statistika_Soal_2_Kelompok_2/
+Project_UTS_Statiska_Soal_2_Kelompok_1/
 │
 ├── index.html
+├── README.md
 │
 ├── pages/
 │   ├── probabilitas.html
 │   ├── modul-a.html
 │   └── modul-b.html
 │
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   └── js/
-│       ├── utils.js
-│       ├── main.js
-│       ├── modul-a.js
-│       ├── modul-b-conditional.js
-│       └── modul-b-bayes.js
-│
-└── README.md
+└── assets/
+    ├── css/
+    │   └── style.css
+    │
+    └── js/
+        ├── utils.js
+        ├── main.js
+        ├── modul-a.js
+        ├── modul-b-conditional.js
+        └── modul-b-bayes.js
 ```
+
+---
 
 ## Penjelasan File JavaScript
 
@@ -76,51 +98,41 @@ Project_UTS_Statistika_Soal_2_Kelompok_2/
 | `modul-b-conditional.js` | Mengelola perhitungan probabilitas bersyarat. |
 | `modul-b-bayes.js` | Mengelola perhitungan Teorema Bayes dan simulasi filter phishing. |
 
+---
+
 ## Rumus yang Digunakan
 
-**1. Probabilitas Dasar**
+### 1. Probabilitas Dasar
 
 Peluang suatu kejadian:
 
-\[
-P(A)=\frac{n(A)}{n(S)}
-\]
+$$P(A)=\\frac{n(A)}{n(S)}$$
 
 Komplemen:
 
-\[
-P(A')=1-P(A)
-\]
+$$P(A')=1-P(A)$$
 
-**2. Gabungan Dua Kejadian**
+### 2. Gabungan Dua Kejadian
 
-\[
-P(A\cup B)=P(A)+P(B)-P(A\cap B)
-\]
+$$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$$
 
-**3. Kejadian Independen**
+### 3. Kejadian Independen
 
-\[
-P(A\cap B)=P(A)\times P(B)
-\]
+$$P(A\\cap B)=P(A)\\times P(B)$$
 
-**4. Probabilitas Bersyarat**
+### 4. Probabilitas Bersyarat
 
-\[
-P(A|B)=\frac{P(A\cap B)}{P(B)}
-\]
+$$P(A|B)=\\frac{P(A\\cap B)}{P(B)}$$
 
-**5. Teorema Bayes**
+### 5. Teorema Bayes
 
-\[
-P(H|E)=\frac{P(E|H)\times P(H)}{P(E)}
-\]
+$$P(H|E)=\\frac{P(E|H)\\times P(H)}{P(E)}$$
 
 Dengan probabilitas total:
 
-\[
-P(E)=P(E|H)P(H)+P(E|H')P(H')
-\]
+$$P(E)=P(E|H)P(H)+P(E|H')P(H')$$
+
+---
 
 ## Cara Menjalankan
 
@@ -128,11 +140,15 @@ Aplikasi dapat dijalankan secara langsung melalui browser tanpa instalasi framew
 
 1. Download atau clone repository ini.
 2. Ekstrak folder proyek jika diunduh dalam format ZIP.
-3. Buka folder proyek.
+3. Buka folder proyek menggunakan Visual Studio Code.
 4. Jalankan file `index.html` menggunakan browser.
 5. Pilih modul probabilitas yang ingin digunakan.
 
-Aplikasi juga dapat dijalankan melalui GitHub Pages sehingga bisa diakses secara online.
+Aplikasi juga telah di-hosting menggunakan GitHub Pages sehingga dapat diakses secara online melalui link berikut:
+
+**https://rasyad0907-a11y.github.io/Project_UTS_Statiska_Soal_2_Kelompok_1/pages/probabilitas.html**
+
+---
 
 ## Fitur Tambahan
 
@@ -145,6 +161,8 @@ Aplikasi juga dapat dijalankan melalui GitHub Pages sehingga bisa diakses secara
 - Hasil perhitungan dilengkapi rumus dan interpretasi.
 - Visualisasi hasil untuk membantu pemahaman materi.
 
+---
+
 ## Tujuan Pembuatan
 
 Proyek ini bertujuan untuk membantu proses pembelajaran Statistika, khususnya materi probabilitas dan Teorema Bayes, melalui aplikasi web yang interaktif dan mudah digunakan.
@@ -152,5 +170,5 @@ Proyek ini bertujuan untuk membantu proses pembelajaran Statistika, khususnya ma
 ---
 
 **Project UTS Statistika – Soal 2**  
-**Kelompok 2**  
+**Kelompok 1**  
 Program Studi Teknik Informatika
