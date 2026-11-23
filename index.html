@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -5,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Kalkulator probabilitas dasar, probabilitas bersyarat, dan Teorema Bayes - UTS Statistika Soal 2">
   <title>Kalkulator Probabilitas &amp; Teorema Bayes</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>">
+
+  <!-- Favicon tanpa emoji -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232563eb'/%3E%3Ctext x='50' y='69' font-size='65' font-family='Arial' font-weight='bold' text-anchor='middle' fill='white'%3EK%3C/text%3E%3C/svg%3E">
+
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -19,6 +23,7 @@
         <p>UTS Statistika &middot; Soal 2 &middot; Teknik Informatika</p>
       </span>
     </a>
+
     <nav class="site-nav" aria-label="Navigasi utama">
       <a href="index.html">Beranda</a>
       <a href="pages/modul-a.html">Modul A</a>
@@ -68,35 +73,61 @@
   <section class="card">
     <h2>Contoh Kasus Bawaan</h2>
     <p class="sub">Tersedia sebagai tombol "Isi contoh" di setiap modul.</p>
-    <div class="table-scroll"><table>
-      <thead><tr><th>Kasus</th><th>Diketahui</th><th>Hasil</th></tr></thead>
-      <tbody>
-        <tr><td>Kejadian saling lepas</td><td>P(A) = 0,3 ; P(B) = 0,4</td><td class="val">P(A ∪ B) = 0,7</td></tr>
-        <tr><td>Filter phishing</td><td>Prevalensi 8% ; sensitivitas 92% ; false positive 3%</td><td class="val">P(ditandai) = 10,12%<br>P(phishing | ditandai) = 72,73%</td></tr>
-      </tbody>
-    </table></div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Kasus</th>
+            <th>Diketahui</th>
+            <th>Hasil</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kejadian saling lepas</td>
+            <td>P(A) = 0,3 ; P(B) = 0,4</td>
+            <td class="val">P(A ∪ B) = 0,7</td>
+          </tr>
+          <tr>
+            <td>Filter phishing</td>
+            <td>Prevalensi 8% ; sensitivitas 92% ; false positive 3%</td>
+            <td class="val">P(ditandai) = 10,12%<br>P(phishing | ditandai) = 72,73%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section class="card">
     <h2>Rumus Ringkas</h2>
-    <div class="table-scroll"><table>
-      <thead><tr><th>Konsep</th><th>Rumus</th></tr></thead>
-      <tbody>
-        <tr><td>Komplemen</td><td class="formula">P(A') = 1 − P(A)</td></tr>
-        <tr><td>Gabungan</td><td class="formula">P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</td></tr>
-        <tr><td>Saling lepas</td><td class="formula">P(A ∩ B) = 0</td></tr>
-        <tr><td>Independen</td><td class="formula">P(A ∩ B) = P(A) × P(B)</td></tr>
-        <tr><td>Bersyarat</td><td class="formula">P(A|B) = P(A ∩ B) / P(B)</td></tr>
-        <tr><td>Probabilitas total</td><td class="formula">P(E) = P(E|H)·P(H) + P(E|H')·P(H')</td></tr>
-        <tr><td>Teorema Bayes</td><td class="formula">P(H|E) = P(E|H)·P(H) / P(E)</td></tr>
-      </tbody>
-    </table></div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Konsep</th>
+            <th>Rumus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Komplemen</td><td class="formula">P(A') = 1 − P(A)</td></tr>
+          <tr><td>Gabungan</td><td class="formula">P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</td></tr>
+          <tr><td>Saling lepas</td><td class="formula">P(A ∩ B) = 0</td></tr>
+          <tr><td>Independen</td><td class="formula">P(A ∩ B) = P(A) × P(B)</td></tr>
+          <tr><td>Bersyarat</td><td class="formula">P(A|B) = P(A ∩ B) / P(B)</td></tr>
+          <tr><td>Probabilitas total</td><td class="formula">P(E) = P(E|H)·P(H) + P(E|H')·P(H')</td></tr>
+          <tr><td>Teorema Bayes</td><td class="formula">P(H|E) = P(E|H)·P(H) / P(E)</td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 </main>
 
-<footer class="site-footer">Kalkulator Probabilitas &middot; HTML, CSS &amp; JavaScript modular (tanpa library, bisa dibuka offline)</footer>
+<footer class="site-footer">
+  Kalkulator Probabilitas &middot; HTML, CSS &amp; JavaScript modular (tanpa library, bisa dibuka offline)
+</footer>
 
 <script src="assets/js/utils.js"></script>
 <script src="assets/js/main.js"></script>
+
 </body>
 </html>
