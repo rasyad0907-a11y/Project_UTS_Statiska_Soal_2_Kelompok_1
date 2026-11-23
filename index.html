@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kalkulator probabilitas dasar, probabilitas bersyarat, dan Teorema Bayes - UTS Statistika Soal 2">
+  <title>Kalkulator Probabilitas &amp; Teorema Bayes</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="logo" aria-hidden="true">K</span>
+      <span>
+        <h1>Kalkulator Probabilitas</h1>
+        <p>UTS Statistika &middot; Soal 2 &middot; Teknik Informatika</p>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="pages/modul-a.html">Modul A</a>
+      <a href="pages/modul-b.html">Modul B</a>
+      <a href="pages/probabilitas.html">Gabungan</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h2>Portal Kalkulator Probabilitas</h2>
+    <p>Hitung probabilitas dasar, probabilitas bersyarat, dan Teorema Bayes lengkap dengan rumus langkah demi langkah dan interpretasi hasil. Pilih modul di bawah ini.</p>
+  </section>
+
+  <section class="cards">
+    <article class="card">
+      <span class="chip">A</span>
+      <h2>Modul A: Probabilitas Dasar</h2>
+      <p>Menghitung peluang kejadian tunggal dan hubungan dua kejadian, dilengkapi diagram Venn.</p>
+      <ul>
+        <li>P(A) dan komplemen P(A')</li>
+        <li>Gabungan P(A ∪ B) dan irisan P(A ∩ B)</li>
+        <li>Kejadian saling lepas dan independen</li>
+      </ul>
+      <a class="btn primary" href="pages/modul-a.html">Buka Modul A</a>
+    </article>
+
+    <article class="card">
+      <span class="chip">B</span>
+      <h2>Modul B: Bersyarat &amp; Bayes</h2>
+      <p>Probabilitas bersyarat, Teorema Bayes, dan simulasi filter phishing 10.000 email.</p>
+      <ul>
+        <li>P(A|B) dan uji independensi</li>
+        <li>Prior, sensitivitas, false positive</li>
+        <li>Simulasi interaktif dengan slider</li>
+      </ul>
+      <a class="btn primary" href="pages/modul-b.html">Buka Modul B</a>
+    </article>
+  </section>
+
+  <section class="card callout">
+    <p><b>Ingin kedua modul dalam satu halaman?</b> Gunakan halaman gabungan dengan tab Modul A dan Modul B.</p>
+    <a class="btn soft" href="pages/probabilitas.html">Buka Halaman Gabungan</a>
+  </section>
+
+  <section class="card">
+    <h2>Contoh Kasus Bawaan</h2>
+    <p class="sub">Tersedia sebagai tombol "Isi contoh" di setiap modul.</p>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Kasus</th><th>Diketahui</th><th>Hasil</th></tr></thead>
+      <tbody>
+        <tr><td>Kejadian saling lepas</td><td>P(A) = 0,3 ; P(B) = 0,4</td><td class="val">P(A ∪ B) = 0,7</td></tr>
+        <tr><td>Filter phishing</td><td>Prevalensi 8% ; sensitivitas 92% ; false positive 3%</td><td class="val">P(ditandai) = 10,12%<br>P(phishing | ditandai) = 72,73%</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="card">
+    <h2>Rumus Ringkas</h2>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Konsep</th><th>Rumus</th></tr></thead>
+      <tbody>
+        <tr><td>Komplemen</td><td class="formula">P(A') = 1 − P(A)</td></tr>
+        <tr><td>Gabungan</td><td class="formula">P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</td></tr>
+        <tr><td>Saling lepas</td><td class="formula">P(A ∩ B) = 0</td></tr>
+        <tr><td>Independen</td><td class="formula">P(A ∩ B) = P(A) × P(B)</td></tr>
+        <tr><td>Bersyarat</td><td class="formula">P(A|B) = P(A ∩ B) / P(B)</td></tr>
+        <tr><td>Probabilitas total</td><td class="formula">P(E) = P(E|H)·P(H) + P(E|H')·P(H')</td></tr>
+        <tr><td>Teorema Bayes</td><td class="formula">P(H|E) = P(E|H)·P(H) / P(E)</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+</main>
+
+<footer class="site-footer">Kalkulator Probabilitas &middot; HTML, CSS &amp; JavaScript modular (tanpa library, bisa dibuka offline)</footer>
+
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modul A - Probabilitas Dasar</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">K</span>
+      <span>
+        <h1>Kalkulator Probabilitas</h1>
+        <p>UTS Statistika &middot; Soal 2 &middot; Teknik Informatika</p>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a href="../index.html">Beranda</a>
+      <a href="modul-a.html">Modul A</a>
+      <a href="modul-b.html">Modul B</a>
+      <a href="probabilitas.html">Gabungan</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-title"><h2>Modul A: Probabilitas Dasar</h2><p>P(A), komplemen, gabungan, irisan, kejadian saling lepas, dan kejadian independen.</p></div>
+
+  <section id="modul-a" aria-label="Modul A: Probabilitas Dasar">
+    <article class="card">
+      <h2>A1. Probabilitas Kejadian P(A) &amp; Komplemen P(A')</h2>
+      <p class="sub">Dihitung dari banyaknya hasil yang diinginkan terhadap seluruh ruang sampel.</p>
+      <form id="formSingle" novalidate>
+        <div class="grid">
+          <div class="field"><label for="nA">n(A) &mdash; hasil yang diinginkan</label><input id="nA" type="number" min="0" step="1" placeholder="mis. 13"></div>
+          <div class="field"><label for="nS">n(S) &mdash; seluruh ruang sampel</label><input id="nS" type="number" min="1" step="1" placeholder="mis. 52"></div>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Hitung</button>
+          <button type="button" class="btn soft" data-action="preset-single">Isi contoh</button>
+          <button type="button" class="btn ghost" data-action="reset-single">Reset</button>
+        </div>
+      </form>
+      <div id="outSingle" class="result" aria-live="polite"></div>
+    </article>
+
+    <article class="card">
+      <h2>A2. Gabungan, Irisan, Saling Lepas &amp; Independen</h2>
+      <p class="sub">Isi P(A) dan P(B), lalu pilih hubungan kejadian. Boleh desimal (0,3 atau 0.3) maupun persen (30%).</p>
+      <form id="formTwo" novalidate>
+        <div class="grid">
+          <div class="field"><label for="pA">P(A)</label><input id="pA" inputmode="decimal" placeholder="mis. 0,3"></div>
+          <div class="field"><label for="pB">P(B)</label><input id="pB" inputmode="decimal" placeholder="mis. 0,4"></div>
+          <div class="field">
+            <label for="rel">Hubungan kejadian</label>
+            <select id="rel">
+              <option value="lepas">Saling lepas (mutually exclusive)</option>
+              <option value="indep">Independen</option>
+              <option value="umum">Umum (P(A ∩ B) diketahui)</option>
+            </select>
+          </div>
+          <div class="field" id="boxInter" hidden><label for="pAB">P(A ∩ B)</label><input id="pAB" inputmode="decimal" placeholder="mis. 0,12"></div>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Hitung</button>
+          <button type="button" class="btn soft" data-action="preset-two">Isi contoh soal</button>
+          <button type="button" class="btn ghost" data-action="reset-two">Reset</button>
+        </div>
+      </form>
+      <div id="outTwo" class="result" aria-live="polite"></div>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">Kalkulator Probabilitas &middot; HTML, CSS &amp; JavaScript modular (tanpa library, bisa dibuka offline)</footer>
+
+  <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/modul-a.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

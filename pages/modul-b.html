@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modul B - Bersyarat &amp; Bayes</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">K</span>
+      <span>
+        <h1>Kalkulator Probabilitas</h1>
+        <p>UTS Statistika &middot; Soal 2 &middot; Teknik Informatika</p>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a href="../index.html">Beranda</a>
+      <a href="modul-a.html">Modul A</a>
+      <a href="modul-b.html">Modul B</a>
+      <a href="probabilitas.html">Gabungan</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-title"><h2>Modul B: Probabilitas Bersyarat &amp; Teorema Bayes</h2><p>Probabilitas bersyarat, Teorema Bayes, dan simulasi filter phishing.</p></div>
+
+  <section id="modul-b" aria-label="Modul B: Probabilitas Bersyarat dan Teorema Bayes">
+    <article class="card">
+      <h2>B1. Probabilitas Bersyarat P(A|B)</h2>
+      <p class="sub">Peluang A terjadi jika B sudah diketahui terjadi.</p>
+      <form id="formCond" novalidate>
+        <div class="grid">
+          <div class="field"><label for="cA">P(A)</label><input id="cA" inputmode="decimal" placeholder="mis. 0,5"></div>
+          <div class="field"><label for="cB">P(B)</label><input id="cB" inputmode="decimal" placeholder="mis. 0,4"></div>
+          <div class="field"><label for="cAB">P(A ∩ B)</label><input id="cAB" inputmode="decimal" placeholder="mis. 0,3"></div>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Hitung</button>
+          <button type="button" class="btn soft" data-action="preset-cond">Isi contoh</button>
+          <button type="button" class="btn ghost" data-action="reset-cond">Reset</button>
+        </div>
+      </form>
+      <div id="outCond" class="result" aria-live="polite"></div>
+    </article>
+
+    <article class="card">
+      <h2>B2. Teorema Bayes</h2>
+      <p class="sub">Menghitung P(H|E) dari prevalensi (prior), sensitivitas, dan false positive. Nama kejadian bisa diganti sesuai kasus.</p>
+      <form id="formBayes" novalidate>
+        <div class="grid">
+          <div class="field"><label for="hName">Nama hipotesis (H)</label><input id="hName" value="phishing"></div>
+          <div class="field"><label for="eName">Nama bukti (E)</label><input id="eName" value="ditandai sistem"></div>
+          <div class="field"><label for="prior">P(H) &mdash; prevalensi</label><input id="prior" inputmode="decimal" placeholder="mis. 8%"><small>P(phishing)</small></div>
+          <div class="field"><label for="sens">P(E|H) &mdash; sensitivitas</label><input id="sens" inputmode="decimal" placeholder="mis. 92%"><small>P(ditandai | phishing)</small></div>
+          <div class="field"><label for="fpr">P(E|H') &mdash; false positive</label><input id="fpr" inputmode="decimal" placeholder="mis. 3%"><small>P(ditandai | bukan phishing)</small></div>
+          <div class="field"><label for="popN">Populasi ilustrasi</label><input id="popN" type="number" min="1" value="10000"></div>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Hitung</button>
+          <button type="button" class="btn soft" data-action="preset-bayes">Isi contoh filter phishing</button>
+          <button type="button" class="btn ghost" data-action="reset-bayes">Reset</button>
+        </div>
+      </form>
+      <div id="outBayes" class="result" aria-live="polite"></div>
+    </article>
+
+    <article class="card">
+      <h2>B3. Simulasi Filter Phishing</h2>
+      <p class="sub">Geser slider dan lihat pengaruh prevalensi terhadap P(phishing | ditandai). Setiap kotak mewakili 10 email dari 10.000 email.</p>
+      <div class="sliders">
+        <div class="slider"><label for="simPrior">Prevalensi phishing <output id="valPrior">8%</output></label><input id="simPrior" type="range" min="0.1" max="60" step="0.1" value="8"></div>
+        <div class="slider"><label for="simSens">Sensitivitas <output id="valSens">92%</output></label><input id="simSens" type="range" min="50" max="100" step="0.5" value="92"></div>
+        <div class="slider"><label for="simFpr">False positive <output id="valFpr">3%</output></label><input id="simFpr" type="range" min="0" max="30" step="0.5" value="3"></div>
+      </div>
+      <div class="actions"><button type="button" class="btn soft" data-action="reset-sim">Kembalikan ke kasus soal (8% / 92% / 3%)</button></div>
+      <div id="outSim" class="result" aria-live="polite"></div>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">Kalkulator Probabilitas &middot; HTML, CSS &amp; JavaScript modular (tanpa library, bisa dibuka offline)</footer>
+
+  <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/modul-b-conditional.js"></script>
+  <script src="../assets/js/modul-b-bayes.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
